@@ -467,7 +467,7 @@ mark{background:var(--bulb);color:#141d22;padding:0 2px;border-radius:2px}
 </div>
 
 <script>
-fetch("posts.json").then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(P){
+fetch("posts.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(P){
 var H="cloverkisscinema.club";
 var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmt(d){var s=d.split("-");return MON[+s[1]-1]+" "+(+s[2])+" '"+s[0].slice(2);}
